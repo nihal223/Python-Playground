@@ -7,7 +7,7 @@ class Node():
         self.left = left
         self.right = right
 
-        
+
 def is_balanced_helper(root):
     # a None tree is balanced
     if root is None:
@@ -39,6 +39,7 @@ def height(root):
 def check_balanced(root):
     if root is None:
         return True
+    print(root.data)
     return check_balanced(root.left) and check_balanced(root.right) and abs(height(root.left) - height(root.right)) <= 1
 
 
