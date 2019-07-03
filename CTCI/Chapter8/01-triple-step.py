@@ -22,6 +22,7 @@ class Test(unittest.TestCase):
     def test_count_steps(self):
         self.assertEqual(count_steps(3), 4)
         self.assertEqual(count_steps(7), 44)
+        self.assertEqual(count_steps(300), 15350287614359738671843506567023635268924281173051801861566524609184461020990367)
 
 
 if __name__ == '__main__':
