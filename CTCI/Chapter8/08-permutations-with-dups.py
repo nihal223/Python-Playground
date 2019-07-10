@@ -2,6 +2,7 @@ def permutations(string):
   return partial_permutations("", sorted(string))
 
 def partial_permutations(partial, letters):
+  print(partial, letters)
   if len(letters) == 0:
     return [partial]
   permutations = []
@@ -13,6 +14,9 @@ def partial_permutations(partial, letters):
     next_letters = letters[:i] + letters[(i+1):]
     permutations += partial_permutations(next_partial, next_letters)
     previous_letter = letter
+
+  print("perm: -------------------------", permutations)
+
   return permutations
 
 import unittest
